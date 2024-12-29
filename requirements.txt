@@ -1,0 +1,6 @@
+argparse
+numpy
+pandas
+parselmouth
+textgrids
+scikit-learn

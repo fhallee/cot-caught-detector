@@ -1,5 +1,4 @@
 import argparse
-import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
@@ -8,7 +7,6 @@ import textgrids
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
-from sklearn.tree import plot_tree
 
 # Set up argument parser
 parser = argparse.ArgumentParser(description='Process formant data and train a Random Forest classifier.')
@@ -203,27 +201,5 @@ feature_names = X_train.columns
 feature_importances = pd.DataFrame({'Feature': feature_names, 'Importance': importances})
 feature_importances = feature_importances.sort_values(by='Importance', ascending=False)
 
+print("Feature Importances:")
 print(feature_importances)
-
-# # Extract the best estimator from the GridSearchCV
-# best_rf = grid_search.best_estimator_
-
-# # Create a figure for the tree plot
-# plt.figure(figsize=(12, 8))
-
-# # Plot the first decision tree in the forest (optional
-# plot_tree(best_rf.estimators_[0],
-#          feature_names=X_train.columns,
-#          rounded=True,
-#          filled=True,
-#          class_names=['Merger', 'No Merger'],
-#          max_depth=3) 
-
-# # Add a title and labels
-# plt.title("First Decision Tree in the Best Random Forest Model")
-# plt.xlabel("Features")
-# plt.ylabel("Class")
-
-# # Show the plot
-# plt.tight_layout()
-# plt.savefig('decision_tree.png')
