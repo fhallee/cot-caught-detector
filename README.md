@@ -1,6 +1,6 @@
 # Automatic Cot-Caught Merger Detection
 
-This repository contains code for automatically detecting the cot-caught merger in American English dialects using a machine learning approach.
+This repository contains code for automatically detecting the cot-caught vowel merger in American English dialects using a machine learning approach.
 
 ## Overview
 
